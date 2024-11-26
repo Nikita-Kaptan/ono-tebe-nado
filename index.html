@@ -13,23 +13,45 @@
   <body>
    
     <header>
-      <menu class="menu">
-        <ul class="menu-item">
-          <li class="menu-item1">
+      <nav class="header__menu">
+        <ul class="header__links-list">
+          <li>
             главная
           </li>
-          <li class="menu-item2 list-marker">
-             посмотреть лоты
+          <li class="list-marker header__links-list-item">
+            посмотреть лоты  
           </li>
-          <li class="menu-item3 list-marker">
+          <li class="list-marker header__links-list-item">
             об аукционе
           </li>
         </ul>
-      </menu>
+      </nav>
+      <img  
+      src="./images/logo-black.svg"
+      alt="Логотип из трех строк, надпись построчно: ОНО ТЕБЕ НАДО"
+      class="header__logo"
+      />
+      <address class="header__address">
+        <a href="tel:+9 999 555 5555">
+          +7 999 555 5555 <br>
+        </a>
+        <a href="mailto:info@sobaka.ge">
+          info@sobaka.ge <br>
+        </a>
+        <a>
+          наб. Принсенгхорт 263-<br>
+          265, Амстердам
+        </a>
+      </address>
    </header>
 
     <main>
-      <section cover></section>
+      <section class="cover">
+        <img
+          src="./images/cover.jpg"  
+        />
+        <div class="overlay"></div>
+      </section>
 
       <section lots></section>
 
