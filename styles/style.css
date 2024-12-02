@@ -1,78 +1,158 @@
-/*Стиль хедера*/
+
 header {
-  
   box-sizing: border-box;
   display: flex;
   position: relative;
   flex-direction: row;
-  flex-grow: 1;
   height: 105px;
   margin: 92px 24px 96px 24px;
   
 }
-/*Стили меню*/
+
 .header__menu {
-  
-  margin: 44px 36px 39px 26.52px;
-  display: flex;
-  flex-wrap: nowrap;
+  padding: 0 auto;
   box-sizing: border-box;
-  height: 22px;
-  width: auto;
+  display: flex;
+  min-width: 392px;
+  flex-wrap: nowrap;
+  margin: 44px 634px 39px 26px;
 }
+
 /*Стили списков меню*/
 .header__links-list {
+  padding: 0 auto;
   display: flex;
   justify-content: center;
-  align-content: center;
-  column-gap: 13px;
-  list-style: none;
+  font-weight: regular;
   font-size: 18px;
- }
-/*Стили пунктов меню*/
-.header__links-list-item{
-  margin-left: 13px;
-}
-/*Стили маркеровки пунктов меню*/
-.list-marker {
-  list-style-type: circle;
-  text-decoration: underline;
-}
-/*Стиль логотопа хедера*/
-.header__logo {
-  box-sizing: border-box;
+  list-style: none;
   
-  margin: 0;
-  display: flex;
-  position: relative;
-  width: 148px;
-  height: 105px;
 }
-/*Стиль адреса xедера*/
-.header__address {
+/*Стили 1 пунктa меню*/
+.header__links-list-item-first {
+  padding: 0;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
-  justify-content: space-evenly;
-  margin: 5px 26px 2px 184px;
-  font-style: normal;
-  font-weight: 400;
+  height: 21px;
 }
-/*Стиль входной группы*/
-.cover {
+/*Стили 2 пунктa меню*/
+.header__links-list-item-second {
+  padding: 0;
+  margin-left: 32px;
+  height: 22px;
   box-sizing: border-box;
   display: flex;
+  border-bottom: 1px solid #000;
+  letter-spacing: 0.01em;
+}
+/*Стили 3 пунктa меню*/
+.header__links-list-item-third {
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  height: 22px;
+  margin-left: 32px;
+  border-bottom: 1px solid #000;
+  letter-spacing: 0.01em;
+}
+/*Стиль маркеровки списка меню*/
+.list__marker {
+  list-style-type: circle;
+}
+/*Стиль лого хедера*/
+.header__logo {
+  padding: 0 auto;
+  margin-left: 458px;
+  width: 136px;
+  height: 102%;
+  box-sizing: border-box;
+  display: flex;
+  position: absolute;
+  justify-content: end;
+}
+/*Стиль блока хедера с адресом*/
+.header__address {
+  padding: 0 auto;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  justify-content: center;
+  margin-left: 786px;
+  line-height: 24px;
+  margin-top: 5px;
+  gap: 1px;
+  font-style: normal;
+  font-weight: regular;
+  letter-spacing: 0.01em;
+  font-size: 18px;
+}
+/*Стиль подчеркивания номера и почты*/
+.underline__address__href {
+  text-underline-offset: 0.2em;
+}
+
+.header__address__no__letter__spacing {
+  letter-spacing: 0;
+}
+/*Стили входной группы*/
+.cover {
+  box-sizing: border-box;
+  margin-top: 93px;
+  min-height: 757px;
+  display: flex;
   position: relative;
-  height: 757px;
-  z-index: -2;
+}
+/*Позиционирование изображения входной группы*/
+.cover__img {
+  padding: 0 auto;
+  display: flex;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: url(../images/cover.jpg);
+  background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
+  z-index: -2;
 }
 /*Стиль прозрачности изображений*/
 .overlay {
-width: 100%;
-height: 100%;
-display: flex;
-position: absolute;
-background-color: rgb(0 0 0 / 0.6);
-}
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: absolute;
+  background-color: rgb(0 0 0 / 0.6);
+  z-index: -1;
+  }
+  /*Стиль заголовка блока cover*/
+  .cover__title {
+    padding: 0 auto;
+    box-sizing: border-box;
+    display: flex;
+    position: relative;
+    min-width: 1000px;
+    min-height: 355px;
+    margin: 165px 50px 237px 50px;
+    font-family: Raleway;
+    font-size: 85px;
+    font-weight: bold;
+    color: #fff;
+  }
+  .aligned-text {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: start;
+    letter-spacing: 0.5em;
+    line-height: 1.15;
+  }
+  /*Kласс для управления межбуквенным расстоянием в местах, где есть эти акценты*/
+  .letter-spacing-extended {
+    letter-spacing: 0.6em;
+  }
+  /*Класс для обнуления общего межбуквенного расстояния для последней буквы*/
+  .no-letter-spacing {
+    letter-spacing: 0;
+  }

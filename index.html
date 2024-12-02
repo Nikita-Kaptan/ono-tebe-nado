@@ -10,54 +10,65 @@
     <title>Оно тебе надо — аукцион вещей, в которые никто не верил</title>
   </head>
 
-  <body>
-   
-    <header>
-      <nav class="header__menu">
-        <ul class="header__links-list">
-          <li>
+<body>
+  <header>
+    <nav class="header__menu">
+      <ul class="header__links-list">
+        <div>
+          <li class="header__links-list-item-first">
             главная
           </li>
-          <li class="list-marker header__links-list-item">
-            посмотреть лоты  
+        </div>
+        <div class="header__links-list-item-second">
+          <li class="list__marker">
+            посмотреть лоты
           </li>
-          <li class="list-marker header__links-list-item">
+        </div>
+        <div class="header__links-list-item-third">
+          <li class="list__marker">
             об аукционе
           </li>
-        </ul>
-      </nav>
-      <img  
+        </div>
+      </ul>
+    </nav>  
+      <img
       src="./images/logo-black.svg"
-      alt="Логотип из трех строк, надпись построчно: ОНО ТЕБЕ НАДО"
+      alt="Логотип из трёх строк, чернобелый, ОНО ТЕБЕ НАДО"
       class="header__logo"
-      />
-      <address class="header__address">
-        <a href="tel:+9 999 555 5555">
-          +7 999 555 5555 <br>
-        </a>
-        <a href="mailto:info@sobaka.ge">
-          info@sobaka.ge <br>
-        </a>
-        <a>
-          наб. Принсенгхорт 263-<br>
-          265, Амстердам
-        </a>
-      </address>
-   </header>
-
-    <main>
-      <section class="cover">
-        <img
-          src="./images/cover.jpg"  
-        />
-        <div class="overlay"></div>
+    />
+    <address class="header__address">
+      <a 
+        class="underline__address__href" 
+        href="tel:+9 999 555 5555" >
+        +9 999 555 5555 <br>
+      </a>
+      <a 
+        class="underline__address__href"
+        href="mailto:info@sobaka.ge">
+        info@sobaka.ge <br>
+      </a>
+      <a class="header__address__no__letter__spacing">
+        наб. Принсенграхт 263-<br>
+        265, Амстердам
+      </a>
+    </address>
+  </header>  
+  <main>
+    <section class="cover">
+      <img class="cover__img"/>
+      <div class="overlay"></div>
+      <section class="cover__title">
+        <h1>
+          <span class="class="aligned-text>О         </span>
+          <span class="letter-spacing-extended">Н</span>
+          <span class="no-letter-spacing">О</span>
+          
+        </h1>
       </section>
+    </section>
+    
+  </main>
+   
 
-      <section lots></section>
-
-      <section about></section>
-    </main>
-
-    <footer></footer>
-  </body>
+</body>
 </html>
