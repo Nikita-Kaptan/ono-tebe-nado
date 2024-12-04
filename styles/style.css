@@ -1,4 +1,3 @@
-
 header {
   box-sizing: border-box;
   display: flex;
@@ -6,7 +5,6 @@ header {
   flex-direction: row;
   height: 105px;
   margin: 92px 24px 96px 24px;
-  
 }
 
 .header__menu {
@@ -26,7 +24,6 @@ header {
   font-weight: regular;
   font-size: 18px;
   list-style: none;
-  
 }
 /*Стили 1 пунктa меню*/
 .header__links-list-item-first {
@@ -35,6 +32,8 @@ header {
   display: flex;
   flex-direction: column;
   height: 21px;
+  font-family: Raleway;
+  text-decoration: none;
 }
 /*Стили 2 пунктa меню*/
 .header__links-list-item-second {
@@ -45,6 +44,8 @@ header {
   display: flex;
   border-bottom: 1px solid #000;
   letter-spacing: 0.01em;
+  font-family: Raleway;
+  
 }
 /*Стили 3 пунктa меню*/
 .header__links-list-item-third {
@@ -55,10 +56,14 @@ header {
   margin-left: 32px;
   border-bottom: 1px solid #000;
   letter-spacing: 0.01em;
+  font-family: Raleway;
 }
 /*Стиль маркеровки списка меню*/
 .list__marker {
   list-style-type: circle;
+}
+.list-no-underline {
+  text-decoration: none;
 }
 /*Стиль лого хедера*/
 .header__logo {
@@ -84,6 +89,7 @@ header {
   margin-top: 5px;
   gap: 1px;
   font-style: normal;
+  font-family: Raleway;
   font-weight: regular;
   letter-spacing: 0.01em;
   font-size: 18px;
@@ -102,7 +108,9 @@ header {
   margin-top: 93px;
   min-height: 757px;
   display: flex;
+  flex-direction: row;
   position: relative;
+  flex-wrap: wrap;
 }
 /*Позиционирование изображения входной группы*/
 .cover__img {
@@ -125,34 +133,267 @@ header {
   position: absolute;
   background-color: rgb(0 0 0 / 0.6);
   z-index: -1;
-  }
-  /*Стиль заголовка блока cover*/
-  .cover__title {
-    padding: 0 auto;
-    box-sizing: border-box;
-    display: flex;
-    position: relative;
-    min-width: 1000px;
-    min-height: 355px;
-    margin: 165px 50px 237px 50px;
-    font-family: Raleway;
-    font-size: 85px;
-    font-weight: bold;
-    color: #fff;
-  }
-  .aligned-text {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: start;
-    letter-spacing: 0.5em;
-    line-height: 1.15;
-  }
-  /*Kласс для управления межбуквенным расстоянием в местах, где есть эти акценты*/
-  .letter-spacing-extended {
-    letter-spacing: 0.6em;
-  }
-  /*Класс для обнуления общего межбуквенного расстояния для последней буквы*/
-  .no-letter-spacing {
-    letter-spacing: 0;
-  }
+}
+/*Стиль заголовка блока cover*/
+.cover__title {
+  padding: 0 auto;
+  box-sizing: border-box;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 1000px;
+  min-height: 355px;
+  margin: 165px 50px 237px 51px;
+  font-family: Raleway;
+  font-size: 100px;
+  font-weight: bold;
+  color: #fff;
+  z-index: 1;
+}
+/*Стиль первой строки заголовка входной группы*/
+.cover-title-first-row {
+  padding: 0 auto;
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  line-height: 1.15;
+  width: 316px;
+  justify-content: start;
+}
+/*Стиль второй строки заголовка входной группы*/
+.cover-title-second-row {
+  padding: 0 auto;
+  margin-left: 286px;
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  line-height: 1;
+}
+/*Стиль третьей строки заголовка входной группы*/
+.cover-title-third-row {
+  padding: 0 auto;
+  justify-content: end;
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  line-height: 1;
+}
+/*Отступы между буквами*/
+.aligned-text {
+  letter-spacing: 0.3em;
+}
+/*Kласс для управления межбуквенным расстоянием в местах, где есть эти акценты*/
+.letter-spacing-extended {
+  letter-spacing: 0.6em;
+}
+/*Класс для обнуления общего межбуквенного расстояния для последней буквы*/
+.no-letter-spacing {
+  letter-spacing: 0;
+}
+/*Стиль описания входной группы*/
+.cover__description {
+  padding: 0 auto;
+  box-sizing: border-box;
+  min-width: 637px;
+  line-height: 28px;
+  display: flex;
+  position: absolute;
+  flex-wrap: nowrap;
+  flex-grow: 1;
+  margin: 667px 385px 62px 78px;
+  font-family: Raleway;
+  font-size: 22px;
+  font-weight: 400;
+  color: #fff;
+  text-transform: uppercase;
+}
+/*Стили отступов описания*/
+.description__spacing-first {
+  word-spacing: 19px;
+}
+.description__spacing-second {
+  word-spacing: 17px;
+}
+.description__spacing-third {
+  word-spacing: 18px;
+}
+/*Стиль кнопки*/
+.description__button {
+  padding: 0 auto;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  position: absolute;
+  width: 256px;
+  height: 51px;
+  margin: 655px 50px 51px 794px;
+  border: 1px solid #fff;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+}
+/*Стиль текста кнопки*/
+.description__button-title {
+  font-family: Raleway;
+  font-size: 22px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #fff;
+}
+/*Стиль блока ЛОТЫ*/
+.lots {
+  box-sizing: border-box;
+  padding: 0 auto;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width: 1052px;
+  height: 692px;
+  margin: 179px 24px 0 24px;
+}
+/*Стиль заголовка блока ЛОТЫ */
+.lots-heading {
+  padding: 0 auto;
+  margin-left: 40px;
+  box-sizing: border-box;
+  display: flex;
+  position: absolute;
+  font-family: Raleway;
+  font-size: 40px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #000;
+}
+/*Список карточек*/
+.lots__card-list {
+  padding: 0 auto; 
+  width: 100%;
+  list-style: none;
+  display: flex;
+  position: relative;
+  flex-grow: 1;
+  gap: 25px;
+}
+/*Стиль пунктов списка карточки*/
+.lots__card-list-item {
+  box-sizing: border-box;
+  width: 334px;
+  height: 563px;
+  padding: 0 auto;
+  margin-top: 74px;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  text-decoration: none;
+}
+/*Картинка первой карточки*/
+.card_type_film {
+  padding: 0 auto;
+  display: flex;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-image: url(../images/card-lot-01.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: -2;
+}
+/*Картинка второй карточки*/
+.card_type_book {
+  padding: 0 auto;
+  display: flex;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-image: url(../images/card-lot-02.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: -2;
+}
+/*Картинка третьей карточки*/
+.card_type_picture {
+  padding: 0 auto;
+  display: flex;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-image: url(../images/card-lot-03.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: -2;
+}
+/*Стиль карточек*/
+.card {
+  padding: 0 auto;
+  box-sizing: border-box;
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  background: transparent;
+}
+/*Стиль заголовка карточек*/
+.card__title {
+  padding: 0 auto;
+  box-sizing: border-box;
+  width: 254px;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 51px 40px 0px;
+  font-family: Raleway;
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.15em;
+  text-transform: uppercase;
+}
+/*Стиль текста карточек*/
+.card__text {
+  padding: 0 auto;
+  box-sizing: border-box;
+  width: 254px;
+  height: auto;
+  display: flex;
+  position: relative;
+  justify-content: end;
+  align-items: end;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  justify-content: end;
+  margin: 0 40px 48px 40px;
+  font-family: Raleway;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 400;
+  text-align: left;
+  color: #fff;
+}
+/*Стиль ссылки узнать больше*/
+.lots__look-more-link {
+  box-sizing: border-box;
+  padding: 0 auto;
+  margin: 667px 820px;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  margin-left: 40px;
+  font-family: Raleway;
+  font-size: 20px;
+  font-weight: 400;
+  color: #000;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
