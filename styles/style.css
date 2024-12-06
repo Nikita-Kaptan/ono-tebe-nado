@@ -1,111 +1,118 @@
 header {
+  padding: 0;
   box-sizing: border-box;
+  margin: 92px 24px 0px;
   display: flex;
   position: relative;
   flex-direction: row;
-  height: 105px;
-  margin: 92px 24px 96px 24px;
-}
-
-.header__menu {
-  padding: 0 auto;
-  box-sizing: border-box;
-  display: flex;
-  min-width: 392px;
   flex-wrap: nowrap;
-  margin: 44px 634px 39px 26px;
+  width: 1052px;
+  height: 105px;
 }
-
-/*Стили списков меню*/
+.header__menu {
+  padding: 0;
+  box-sizing: border-box;
+  margin: 44px 0px 0px 26px;
+  height: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: start;
+}
 .header__links-list {
   padding: 0 auto;
   display: flex;
-  justify-content: center;
+  position: relative;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  flex-grow: 1;
   font-family: Raleway;
-  font-weight: regular;
+  font-weight: 400;
   font-size: 18px;
-  list-style: none;
-}
-/*Стили 1 пунктa меню*/
-.header__links-list-item-first {
-  padding: 0;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  height: 21px;
-  font-family: Raleway;
-  text-decoration: none;
-}
-/*Стили 2 пунктa меню*/
-.header__links-list-item-second {
-  padding: 0;
-  margin-left: 32px;
-  height: 22px;
-  box-sizing: border-box;
-  display: flex;
-  border-bottom: 1px solid #000;
-  letter-spacing: 0.01em;
-  font-family: Raleway;
-}
-/*Стили 3 пунктa меню*/
-.header__links-list-item-third {
-  padding: 0;
-  box-sizing: border-box;
-  display: flex;
-  height: 22px;
-  margin-left: 32px;
-  border-bottom: 1px solid #000;
-  letter-spacing: 0.01em;
-  font-family: Raleway;
-}
-/*Стиль маркеровки списка меню*/
-.list__marker {
   list-style-type: circle;
+  text-decoration: none;
+  gap: 32px;
 }
-.list-no-underline {
+.header__links-list-item_no-bullet {
+  padding: 0;
+  list-style-type: none;
+  line-height: 21px;
+  display: flex;
+  flex-direction: column;
   text-decoration: none;
 }
-/*Стиль лого хедера*/
+.header__links-list-item {
+  padding: 0;
+  list-style-type: none;
+  line-height: 22px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-bottom: 1px solid #000;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+}
+.header__link {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+.header__link_active {
+}
 .header__logo {
-  padding: 0 auto;
-  margin-left: 458px;
-  width: 136px;
-  height: 102%;
+  padding: 0;
+  margin: 0px 0px 0px 36px;
   box-sizing: border-box;
   display: flex;
-  position: absolute;
-  justify-content: end;
+  position: relative;
+  justify-items: center;
+  align-items: center;
+  width: 148px;
+  height: 105px;
 }
-/*Стиль блока хедера с адресом*/
-.header__address {
+.header__logo-image {
+  margin: 0;
+  padding: 0;
+  border: none;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+.address {
   padding: 0 auto;
+  margin: 5px 0px 2px 185px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  position: absolute;
-  justify-content: center;
-  margin-left: 786px;
+  position: relative;
+  justify-items: end;
   line-height: 24px;
-  margin-top: 5px;
+  height: 100%;
   gap: 1px;
-  font-style: normal;
   font-family: Raleway;
-  font-weight: regular;
-  letter-spacing: 0.01em;
+  font-weight: 400;
   font-size: 18px;
+  font-style: normal;
 }
-/*Стиль подчеркивания номера и почты*/
-.underline__address__href {
+.header__address {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-content: end;
+  letter-spacing: 0.01em;
+  text-decoration: underline;
   text-underline-offset: 0.2em;
 }
 
-.header__address__no__letter__spacing {
-  letter-spacing: 0;
-}
 /*Стили входной группы*/
 .cover {
   box-sizing: border-box;
-  margin-top: 93px;
+  margin-top: 96px;
   min-height: 757px;
   display: flex;
   flex-direction: row;
@@ -517,8 +524,6 @@ footer {
   display: flex;
   flex-direction: column;
   position: relative;
-  
-  
 }
 .footer__menu-list {
   padding: 0 auto;
@@ -531,7 +536,8 @@ footer {
   list-style-type: none;
 }
 .footer__list-item {
-  border-bottom: 1px solid #000;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
 }
 .footer__social-list {
   padding: 0 auto;
@@ -539,6 +545,31 @@ footer {
   display: flex;
   flex-direction: row;
   position: relative;
+  flex-wrap: nowrap;
+  justify-content: space-between;
   width: 240px;
   height: 48px;
+}
+.footer__social-list-item {
+  padding: 0 auto;
+  margin: 0;
+  box-sizing: border-box;
+  display: flex;
+  position: relative;
+  width: 48px;
+  height: 100%;
+  justify-items: center;
+  align-items: center;
+}
+.footer__social-link {
+  padding: 0 auto;
+  margin: 0 auto;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+.footer__social-icon {
+  padding: 0 auto;
+  margin: 0 auto;
+  background-size: cover;
 }

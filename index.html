@@ -11,43 +11,48 @@
   </head>
 
   <body>
-    <header>
-      <nav class="header__menu">
-        <ul class="header__links-list">
-          <div>
-            <a class="header__links-list-item-first" href="#"> главная </a>
-          </div>
-          <div class="header__links-list-item-second">
-            <li class="list__marker">
-              <a class="list-no-underline" href="#lots">посмотреть лоты</a>
-            </li>
-          </div>
-          <div class="header__links-list-item-third">
-            <li class="list__marker">
-              <a class="list-no-underline" href="#about">об аукционе</a> 
-            </li>
-          </div>
-        </ul>
-      </nav>
-      <img
-        src="./images/logo-black.svg"
-        alt="Логотип из трёх строк, чернобелый, ОНО ТЕБЕ НАДО"
-        class="header__logo"
-      />
-      <address class="header__address">
-        <a class="underline__address__href" href="tel:+9 999 555 5555">
-          +9 999 555 5555 <br />
-        </a>
-        <a class="underline__address__href" href="mailto:info@sobaka.ge">
-          info@sobaka.ge <br />
-        </a>
-        <a class="header__address__no__letter__spacing">
-          наб. Принсенграхт 263-<br />
-          265, Амстердам
-        </a>
-      </address>
-    </header>
+   
     <main>
+      <header>
+        <nav class="header__menu">
+          <ul class="header__links-list">
+            <li class="header__links-list-item_no-bullet">
+              <a class="header_link " href="#">главная</a>
+            </li>
+            <li>
+              <a class="header_link header__links-list-item" href="#lots">посмотреть лоты</a>
+            </li>
+            <li>
+              <a class="header_link header__links-list-item">об аукционе</a>
+            </li>
+          </ul>
+        </nav>
+        <a class="header__logo">
+          <img 
+          class="header__logo-image"
+          alt="Логотип из трёх строк, чернобелый, ОНО ТЕБЕ НАДО"
+          src="./images/logo-black.svg"
+          />
+        </a>
+        <address class="address">
+          <a 
+            class="header__address"
+            href="tel:+9 999 555 5555">
+            +9 999 555 5555 
+            <br />
+          </a>
+          <a 
+            class="header__address"
+            href="mailto:info@sobaka.ge">
+            info@sobaka.ge 
+            <br />
+          </a>
+          <a>
+            наб. Принсенграхт 263-<br />
+            265, Амстердам
+          </a>
+        </address>
+      </header>
       <section class="cover">
         <img class="cover__img" />
         <div class="overlay"></div>
@@ -185,7 +190,24 @@
         </ul>
       </nav>
       <div class="footer__social-list">
-        
+        <li class="footer__social-list-item">
+          <a 
+          class="footer__social-link" href="https://www.youtube.com/" target="_blank">
+          <img class="footer__social-icon" src="./images/yt.svg"/>
+          </a>
+        </li>
+        <li class="footer__social-list-item">
+          <a 
+          class="footer__social-link" href="https://vk.com/" target="_blank">
+          <img class="footer__social-icon" src="./images/vk.svg"/>
+          </a>
+        </li>
+        <li class="footer__social-list-item">
+          <a 
+          class="footer__social-link" href="https://ru.pinterest.com/" target="_blank">
+          <img class="footer__social-icon" src="./images/pinterest.svg"/>
+          </a>
+        </li>
       </div>
     </footer>
   </body>
