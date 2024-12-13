@@ -26,58 +26,56 @@
         </li>
       </ul>
     </nav>
-    <a class="header__logo" href="#">
+    <a class="header__logo">
       <img class="header__logo-image" alt="Логотип из трёх строк, чернобелый, ОНО ТЕБЕ НАДО"
         src="./images/logo-black.svg" />
     </a>
-    <address class="address">
-      <a class="header__address" href="tel:+99995555555">
+    <address class="address header__address">
+      <a class="address-accent" href="tel:+99995555555">
         <p>+9 999 555 5555</p>
       </a>
-      <a class="header__address" href="mailto:info@sobaka.ge">
+      <a class="address-accent" href="mailto:info@sobaka.ge">
         <p>info@sobaka.ge</p>
       </a>
-      <a class="header__address non-underline">
+      <p>
         наб. Принсенграхт 263-<br />
         265, Амстердам
-      </a>
+      </p>
     </address>
   </header>
   <main>
     <section class="cover">
       <div class="overlay"></div>
-      <section class="cover__title">
-        <section class="aligned-text">
+      <h1 class="cover__title">
+        <div class="aligned-text">
           <span class="aligned_letters">о</span>
           <span class="letter-spacing-extended">н</span>
           <span class="no-letter-spacing">о</span>
-        </section>
-        <section class="aligned-text_center">
+        </div>
+        <div class="aligned-text_center">
           <span class="aligned_letters">те</span>
           <span class="letter-spacing-extended">б</span>
           <span class="no-letter-spacing">е</span>
-        </section>
-        <section class="aligned-text_right">
+        </div>
+        <div class="aligned-text_right">
           <span class="letter-spacing-extended">н</span>
           <span class="aligned_letters">ад</span>
           <span class="no-letter-spacing">о</span>
-        </section>
-      </section>
+        </div>
+      </h1>
       <p class="cover__description">
-        <span class="description__spacing-first">аукцион вещей, в </span>
-        <span class="description__spacing-second">которые</span>
-        <span class="description__spacing-third"> никто не верил</span>
+        аукцион вещей, в которые никто не верил
       </p>
-      <section class="description__button">
+      <div class="description__button">
         <a class="description__button-title" href="#">сделать ставку</a>
-      </section>
+      </div>
     </section>
     <section class="lots" id="lots">
       <h2 class="lots-heading">лоты</h2>
       <ul class="lots__card-list">
         <li class="lots__card-list-item">
           <a href="#">
-            <section class="card_type_film">
+            <div class="card__content card_type_film">
               <div class="overlay"></div>
               <article class="card">
                 <h3 class="card__title">
@@ -89,12 +87,12 @@
                   Андерсон?
                 </p>
               </article>
-            </section>
+            </div>
           </a>
         </li>
         <li class="lots__card-list-item">
           <a href="#">
-            <section class="card_type_book">
+            <div class="card__content card_type_book">
               <div class="overlay"></div>
               <article class="card">
                 <h3 class="card__title">
@@ -109,12 +107,12 @@
                   Джеймса Джойса?
                 </p>
               </article>
-            </section>
+            </div>
           </a>
         </li>
         <li class="lots__card-list-item">
           <a href="#">
-            <section class="card_type_picture">
+            <div class="card__content card_type_picture">
               <div class="overlay"></div>
               <article class="card">
                 <h3 class="card__title">
@@ -127,7 +125,7 @@
                   что это — одна из революционных работ Кандинского?
                 </p>
               </article>
-            </section>
+            </div>
           </a>
         </li>
       </ul>
@@ -137,29 +135,31 @@
       <div class="about__logo">
         <img src="./images/logo-white.svg" class="about__logo-image" alt="Логотип белого цвета - ОНО ТЕБЕ НАДО" />
       </div>
-      <section class="about__column">
+      <div class="about__column">
         <h2 class="about__title">об аукционе</h2>
-        <p class="about__text about__text-start">
-          Здесь вы не встретите очередное пафосное собрание невероятно дорогого антиквариата.
-          Наши лоты вообще не должны были попасть ни на один аукцион. Потому что кому нужен дневник девочки-подростка
-          или картина, которую может нарисовать даже ребёнок? Кому нужны все эти странные вещи, созданные любителями?
-        </p>
-        <p class="about__text about__text-end">
-          Слишком сложные или, наоборот, слишком простые. Опережающие своё время. В пух и прах растерзанные критиками.
-          Непринятые и непонятые. Когда-то они казались просто неудачными. Но, несмотря
-          на критику, кажущуюся простоту или сложность, сейчас без этих лотов невозможно представить современную
-          культуру.
-          Когда в эти вещи не верил никто, продолжали верить их создатели. И сейчас эти лоты стали культовыми.
-        </p>
-      </section>
+        <div class="about__text">
+          <p>
+            Здесь вы не встретите очередное пафосное собрание невероятно дорогого антиквариата.
+            Наши лоты вообще не должны были попасть ни на один аукцион. Потому что кому нужен дневник девочки-подростка
+            или картина, которую может нарисовать даже ребёнок? Кому нужны все эти странные вещи, созданные любителями?
+          </p>
+          <p>
+            Слишком сложные или, наоборот, слишком простые. Опережающие своё время. В пух и прах растерзанные критиками.
+            Непринятые и непонятые. Когда-то они казались просто неудачными. Но, несмотря
+            на критику, кажущуюся простоту или сложность, сейчас без этих лотов невозможно представить современную
+            культуру.
+            Когда в эти вещи не верил никто, продолжали верить их создатели. И сейчас эти лоты стали культовыми.
+          </p>
+        </div>
+      </div>
     </section>
   </main>
   <footer>
-    <address class="address">
-      <a class="footer__address" href="tel:+99995555555">
+    <address class="address footer__address">
+      <a class="address-accent" href="tel:+99995555555">
         <p>+9 999 555 5555</p>
       </a>
-      <a class="footer__address" href="mailto:info@sobaka.ge">
+      <a class="address-accent" href="mailto:info@sobaka.ge">
         <p>info@sobaka.ge</p>
       </a>
       <p>

@@ -107,12 +107,12 @@ header {
   position: relative;
   align-content: end;
   letter-spacing: 0.01em;
-  text-decoration: underline;
-  text-underline-offset: 0.2em;
+
   margin-left: 184px;
 }
-.non-underline {
-  text-decoration: none;
+.address-accent {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
 }
 /*Стили входной группы*/
 .cover {
@@ -128,7 +128,6 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  z-index: -1;
 }
 /*Стиль прозрачности изображений*/
 .overlay {
@@ -139,7 +138,7 @@ header {
   position: absolute;
   inset: 0;
   background-color: rgb(0 0 0 / 0.6);
-  z-index: 0;
+  z-index: 1;
 }
 /*Стиль заголовка блока cover*/
 .cover__title {
@@ -149,7 +148,7 @@ header {
   display: flex;
   flex-direction: column;
   background-color: transparent;
-  z-index: 1;
+  z-index: 2;
   color: #fff;
   font-family: Raleway, Arial, sans-serif;
   font-size: 100px;
@@ -205,7 +204,7 @@ header {
   display: flex;
   flex-direction: row;
   position: relative;
-  z-index: 1;
+  z-index: 2;
   flex-grow: 1;
   flex-wrap: nowrap;
   line-height: 28px;
@@ -231,6 +230,7 @@ header {
   justify-content: center;
   align-items: center;
   background: transparent;
+  z-index: 2;
 }
 /*Стиль текста кнопки*/
 .description__button-title {
@@ -297,6 +297,7 @@ header {
   display: flex;
   flex-direction: column;
   position: relative;
+  flex-grow: 1;
 }
 /*Стиль заголовка карточек*/
 .card__title {
@@ -316,6 +317,7 @@ header {
   text-decoration-thickness: 1px;
   text-underline-offset: 0.15em;
   text-transform: uppercase;
+  z-index: 2;
 }
 /*Стиль текста карточек*/
 .card__text {
@@ -337,48 +339,29 @@ header {
   font-weight: 400;
   text-align: left;
   color: #fff;
+  z-index: 2;
+}
+.card__content {
+  padding: 0;
+  display: grid;
+  position: relative;
+  grid-row: 1;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
 }
 /*Картинка первой карточки*/
 .card_type_film {
-  padding: 0;
-  display: grid;
-  position: relative;
-  grid-row: 1;
-  grid-column: 1/2;
-  width: 100%;
-  height: 100%;
   background-image: url(../images/card-lot-01.jpg);
-  background-size: cover;
-  background-position: center;
-  z-index: -1;
 }
 /*Картинка второй карточки*/
 .card_type_book {
-  padding: 0;
-  display: grid;
-  position: relative;
-  grid-row: 1;
-  grid-column: 1/3;
-  width: 100%;
-  height: 100%;
   background-image: url(../images/card-lot-02.jpg);
-  background-size: cover;
-  background-position: center;
-  z-index: -1;
 }
 /*Картинка третьей карточки*/
 .card_type_picture {
-  padding: 0;
-  display: grid;
-  position: relative;
-  grid-row: 1;
-  grid-column: 1/4;
-  width: 100%;
-  height: 100%;
   background-image: url(../images/card-lot-03.jpg);
-  background-size: cover;
-  background-position: center;
-  z-index: -1;
 }
 /*Стиль ссылки узнать больше*/
 .lots__look-more-link {
@@ -412,12 +395,10 @@ header {
   padding: 0;
   box-sizing: border-box;
   width: 693px;
-  min-height: 462px;
   display: grid;
   position: relative;
   justify-self: end;
   align-self: end;
-  /*margin-bottom: 13px;*/
   align-items: start;
 }
 /*контейнер с логотипом блока about*/
@@ -460,31 +441,21 @@ header {
 /*Стиль текста блока about*/
 .about__text {
   padding: 0;
+  margin: 150px 0px 0px 0px;
   box-sizing: border-box;
   width: 100%;
   display: grid;
   justify-self: stretch;
-  align-self: start;
+  align-self: end;
   font-family: Raleway, Arial, sans-serif;
-  font-weight: 400px;
+  font-weight: 400;
   font-size: 20px;
   line-height: 24px;
   letter-spacing: 0.01em;
   grid-column: 1;
   grid-row: 1;
-  
+  gap: 24px;
 }
-.about__text-start {
-  padding: 0;
-  margin: 151px 5px 0px 0px;
-  box-sizing: border-box;
-}
-.about__text-end {
-  padding: 0;
-  margin: 294px 0px 0px 0px;
-  box-sizing: border-box;
-}
-
 /*Стиль футера*/
 footer {
   padding: 0;
@@ -513,8 +484,6 @@ footer {
   font-weight: regular;
   letter-spacing: 0.01em;
   font-size: 18px;
-  text-decoration: underline;
-  text-underline-offset: 0.2em;
 }
 .footer__menu {
   padding: 0;
