@@ -428,7 +428,6 @@ header {
   display: flex;
   flex-direction: column;
   position: relative;
-  flex-direction: column;
   flex-grow: 1;
   justify-content: start;
   align-content: start;
