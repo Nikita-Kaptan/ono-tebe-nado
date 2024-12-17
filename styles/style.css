@@ -377,47 +377,41 @@ header {
   color: #000;
   text-decoration: underline;
   text-decoration-thickness: 1px;
-  text-underline-offset: 0.2em;
+  text-underline-offset: 0.25em;
 }
 /*Стиль секции about*/
 .about {
   padding: 0;
+  margin: 146px 24px 0px;
   box-sizing: border-box;
   width: 1052px;
-  display: grid;
+  display: flex;
   position: relative;
-  margin: 146px 24px 0px;
-  grid-template-columns: 334px 1fr;
-  grid-template-rows: 595px;
-}
-/* класс для колонок*/
-.about__column {
-  padding: 0;
-  box-sizing: border-box;
-  width: 693px;
-  display: grid;
-  position: relative;
-  justify-self: end;
-  align-self: end;
-  align-items: start;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: start;
+  flex-grow: 1;
 }
 /*контейнер с логотипом блока about*/
 .about__logo {
-  padding: 0;
   box-sizing: border-box;
-  width: 240px;
-  display: grid;
-  height: 240px;
+  padding: 0;
   margin: 35px 0px 0px 47px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 240px;
+  height: 240px;
   border-radius: 50%;
   background-color: #000;
-  grid-row: 1;
-  grid-column: 1/2;
-  justify-items: center;
-  align-items: center;
+  justify-content: center;
+  align-content: center;
 }
 /*Стиль изображение логотипа блока about*/
 .about__logo-image {
+  box-sizing: border-box;
+  display: flex;
+  position: relative;
   margin: 0 auto;
   padding: 0;
   border: none;
@@ -425,35 +419,48 @@ header {
   height: 114px;
   background-size: cover;
 }
+/* класс для колонок*/
+.about__column {
+  padding: 0;
+  margin: 133px 0px 0px 0px;
+  box-sizing: border-box;
+  max-width: 693px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: start;
+  align-content: start;
+}
 /*Стиль заголовка блока about*/
 .about__title {
   padding: 0;
   margin: 3px 0px 0px 0px;
   box-sizing: border-box;
-  width: 291px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
   font-family: Raleway, Arial, sans-serif;
   font-size: 40px;
   font-weight: 700;
   text-transform: uppercase;
-  grid-row: 1;
-  grid-column: 1;
 }
 /*Стиль текста блока about*/
 .about__text {
   padding: 0;
-  margin: 150px 0px 0px 0px;
+  margin: 100px 0px 0px 0px;
   box-sizing: border-box;
+  display: flex;
+  position: relative;
+  flex-direction: column;
   width: 100%;
-  display: grid;
-  justify-self: stretch;
-  align-self: end;
   font-family: Raleway, Arial, sans-serif;
   font-weight: 400;
   font-size: 20px;
   line-height: 24px;
   letter-spacing: 0.01em;
-  grid-column: 1;
-  grid-row: 1;
   gap: 24px;
 }
 /*Стиль футера*/
@@ -481,7 +488,7 @@ footer {
   gap: 1px;
   font-style: normal;
   font-family: Raleway, Arial, sans-serif;
-  font-weight: regular;
+  font-weight: 400;
   letter-spacing: 0.01em;
   font-size: 18px;
 }
